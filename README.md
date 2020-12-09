@@ -1,10 +1,13 @@
-# web3-react-boilerplate
+# Test dapp for Chainlink on xDAI
 
-This boilerplate is meant to be used during Protofire's interview process. It's a simple dapp that only works with
-MetaMask and in Rinkeby, and shows the latest block number.
+This is a sample application which connects to an AccessControlledAggregator running on the xDAI chain.  
+To run it, simply install the dependencies and run the application:
+```bash
+$ yarn
+$ yarn start
+```
 
-This is a public repo, so if you want to make a private repository for your exercise, don't fork it. Instead, follow
-[these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository).
+You need to have your Metamask extenson configured for use with the xDAI sidechain. For instructions, head over to [xdaichain.com](https://xdaichain.com)
 
 ## Stack
 
