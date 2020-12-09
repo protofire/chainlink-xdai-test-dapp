@@ -1,6 +1,10 @@
 import React from 'react';
 import { useWeb3Context } from 'web3-react'
+import AggregatorState from './components/AggregatorState'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Container } from 'react-bootstrap'
 
 
 function App() {
@@ -22,15 +26,18 @@ function App() {
   if (!context.active && !context.error) {
     content = <div>'Loading...'</div>
   } else if (context.error) {
-    content = <div>'There was an error'</div>
+  content = <div>'There was an error: {context.error.toString()}'</div>
   } else {
-    content = <div>{blockNumber ? `Block number: ${blockNumber.toString()}` : 'Fetching block number'}</div>
+    //content = <div>{blockNumber ? `Block number: ${blockNumber.toString()}` : 'Fetching block number'}</div>
+    content = <AggregatorState />
   }
 
   return (
-    <div className="App">
-      {content}
-    </div>
+    <Container>
+      <div className="App">
+        {content}
+      </div>
+    </Container>
   );
 }
 
