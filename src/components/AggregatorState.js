@@ -3,6 +3,17 @@ import useAggregator from '../hooks/useAggregator'
 import { Alert, Button, Card, Navbar} from 'react-bootstrap'
 import { useWeb3Context } from 'web3-react';
 
+const networks = {
+    100: {
+        name: "xdai",
+        explorer: "http://blockscout.com/poa/xdai",
+    },
+    1: {
+        explorer: "http://cchain.explorer.avax-test.network", // for some reason metamask reports networkID as 1 even though it should be 43113
+        name: "avax-test"
+    }
+}
+
 export default function AggregatorState() {
     const context = useWeb3Context()
 
@@ -58,8 +69,8 @@ export default function AggregatorState() {
                 <Navbar.Brand>Test Dapp for Chainlink</Navbar.Brand>
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Using Aggregator at&nbsp;
-                        <a href={`https://blockscout.com/poa/xdai/address/${aggregator?aggregator.address:"loading"}`}>
+                        [{networks[context.networkId].name}] Using Aggregator at&nbsp;
+                        <a href={`${networks[context.networkId].explorer}/address/${aggregator?aggregator.address:"loading"}`}>
                             {aggregator?aggregator.address:"loading"}
                         </a>
                     </Navbar.Text>
