@@ -12,6 +12,10 @@ const networkConfig = {
     1: {
         aggregator: "0x88c85C8B64F15c1E65e71a366025007d09818dF7",
         requester: "0xbAc955DD10EE42635Fb7D8096871Ab52e0aAA92d" 
+    },
+    80: {
+        aggregator: "0x8230BA7b0897BF4073Ea054520E2E75AC006f5A1",
+        requester: "0xED6401755502102BcE0D0D5599BdA383bE1f692a"
     }
 }
 

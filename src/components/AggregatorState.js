@@ -11,6 +11,10 @@ const networks = {
     1: {
         explorer: "http://cchain.explorer.avax-test.network", // for some reason metamask reports networkID as 1 even though it should be 43113
         name: "avax-test"
+    },
+    80: {
+        explorer: null,
+        name: "plasm-dusty"
     }
 }
 
@@ -70,9 +74,16 @@ export default function AggregatorState() {
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
                         [{networks[context.networkId].name}] Using Aggregator at&nbsp;
-                        <a href={`${networks[context.networkId].explorer}/address/${aggregator?aggregator.address:"loading"}`}>
-                            {aggregator?aggregator.address:"loading"}
-                        </a>
+                        {
+                            networks[context.networkId].explorer?
+                                <a href={`${networks[context.networkId].explorer}/address/${aggregator?aggregator.address:"loading"}`}>
+                                    {aggregator?aggregator.address:"loading"}
+                                </a>
+                                :
+                                <a href="#no-explorer" onClick={() => alert(`The ${networks[context.networkId].name} network does not support EVM block explorers.`)}>
+                                    {aggregator?aggregator.address:"loading"}
+                                </a>
+                        }
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>
