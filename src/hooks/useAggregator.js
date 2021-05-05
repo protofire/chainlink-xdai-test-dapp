@@ -16,6 +16,10 @@ const networkConfig = {
     80: {
         aggregator: "0x8230BA7b0897BF4073Ea054520E2E75AC006f5A1",
         requester: "0xED6401755502102BcE0D0D5599BdA383bE1f692a"
+    },
+    44787: {
+        aggregator: "0xb76884F7961e3c8bc0b8893F5728794B841DE0A2",
+        requester: "0x7011A51B277E19046F030a06e4f57423E4833dE7",
     }
 }
 

@@ -15,6 +15,10 @@ const networks = {
     80: {
         explorer: null,
         name: "plasm-dusty"
+    },
+    44787: {
+        explorer: "https://alfajores-blockscout.celo-testnet.org",
+        name: "celo-alfajores"
     }
 }
 
@@ -109,7 +113,7 @@ export default function AggregatorState() {
                         Oracle Updater Addresses
                     </Card.Title>
                     <Card.Text>
-                        {oracles.map(o => <span>{o}</span>)}
+                        {oracles.map(o => <pre>{o}</pre>)}
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -120,7 +124,7 @@ export default function AggregatorState() {
                     </Card.Title>
                     <Card.Text>
                         {events.map(e => 
-                            <p>{e.type}: {e.data}</p>
+                            <pre>{e.type}: {e.data}</pre>
                         )}
                     </Card.Text>
                 </Card.Body>
