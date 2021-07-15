@@ -19,7 +19,11 @@ const networks = {
     44787: {
         explorer: "https://alfajores-blockscout.celo-testnet.org",
         name: "celo-alfajores"
-    }
+    },
+    1666700000: {
+        explorer: "https://explorer.pops.one",
+        name: "harmony-test-shard-zero"
+    },
 }
 
 export default function AggregatorState() {

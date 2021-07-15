@@ -20,7 +20,11 @@ const networkConfig = {
     44787: {
         aggregator: "0xb76884F7961e3c8bc0b8893F5728794B841DE0A2",
         requester: "0x7011A51B277E19046F030a06e4f57423E4833dE7",
-    }
+    },
+    1666700000 : {
+        aggregator: "0x6f1a5fd17CaC58C2C4bd3f0fe995e2374f24C07e",
+        requester: "0x654503DB148297ca0a317161dd84e4ae207E980f",
+    },
 }
 
 function useAggregator() {
